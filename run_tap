@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Running pygnome for site $1, for time-steps $2 - $3"
+echo $(($1-1))
+echo $1
+
+for i in `seq $2 $3`
+do
+   python RunPyGnome.py . $i $((i+1)) $(($1-1)) $1 
+done
