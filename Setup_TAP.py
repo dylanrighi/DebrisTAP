@@ -74,21 +74,21 @@ WindTopoFile = "wrf_topo_1.3.10.DAT"
 # Seasons = [["All_year", range(1,13) ],
 #               ]
 Seasons = [
-          # ["AllYear", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]],
+          ["AllYear", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]],
           #["Ice", [12, 1, 2, 3, 4, 5]],
           #["NoIce",  [6, 7, 8, 9, 10, 11 ]], 
-          ["Winter", [12, 1, 2 ]],
+          # ["Winter", [12, 1, 2 ]],
           # ["Summer",  [6, 7, 8, 9, 10, 11 ]], 
-          ["Spring",  [3, 4, 5 ]], 
-          ["Summer",  [6, 7, 8 ]], 
-          ["Faller",  [9, 10, 11]],
+          # ["Spring",  [3, 4, 5 ]], 
+          # ["Summer",  [6, 7, 8 ]], 
+          # ["Faller",  [9, 10, 11]],
           ]              
 
 # You don't need to do anything with this
 StartTimeFiles = [(os.path.join(RootDir, s[0]+'Starts.txt'), s[0]) for s in Seasons]
 
 # number of start times you want in each season:
-NumStarts = 500
+NumStarts = 200
 #RunStarts = range(0,NumStarts)
 #RunStarts = range(0,50)
 
@@ -106,6 +106,9 @@ RunFiles = []
 # # Length of release in hours  (0 for instantaneous)
 ReleaseLength = 14*24   # platforms
 
+# # windage details
+Windage = [0.04, 0.05]
+WindagePersist = -1
 
 # name of the GNOME SAV file you want to use
 # note: GNOME locks it (for a very brief time when loading) 
@@ -150,7 +153,7 @@ TrajectoriesPath = "Trajectories_n" + str(NumLEs) # relative to RootDir
 CubesPath = "Cubes_n" + str(NumLEs)
 CubesRootNames = ["SoCa" for i in StartTimeFiles] # built to match the start time files
 
-CubeStartSitesFilename = os.path.join(RootDir, "SB_sites_all.txt")
+CubeStartSitesFilename = os.path.join(RootDir, "sites_debris.txt")
 spos = open(os.path.join(RootDir,CubeStartSitesFilename)).readlines()
 
 # kludge for iterating runs
@@ -166,7 +169,7 @@ CubeStartSites = [x for x in CubeStartSites if x]
 
 CubeStartFilter = []   # January
 
-MapName = "SoCal TAP"
+MapName = "Debris TAP"
 MapFileName, MapFileType = (os.path.join('Data','SoCalcoast_big.bna'), "BNA")
 
 # days = [1, 3, 5, 7, 10, 15, 20, 30, 50, 70, 90, 120, 180]

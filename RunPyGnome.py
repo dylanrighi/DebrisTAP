@@ -232,7 +232,9 @@ for Season in setup.StartTimeFiles:
             spill = point_line_release_spill(num_elements=setup.NumLEs,
                                              start_position=( start_position[0], start_position[1], 0.0 ),
                                              release_time=start_time,
-                                             end_release_time=start_time+release_duration
+                                             end_release_time=start_time+release_duration,
+                                             windage_range=(setup.windage),
+                                             windage_persist=setup.windage_persist
                                              )
 
 
