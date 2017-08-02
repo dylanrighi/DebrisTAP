@@ -233,8 +233,8 @@ for Season in setup.StartTimeFiles:
                                              start_position=( start_position[0], start_position[1], 0.0 ),
                                              release_time=start_time,
                                              end_release_time=start_time+release_duration,
-                                             windage_range=(setup.windage),
-                                             windage_persist=setup.windage_persist
+                                             windage_range=(setup.Windage),
+                                             windage_persist=setup.WindagePersist
                                              )
 
 
