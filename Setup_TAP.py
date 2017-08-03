@@ -107,7 +107,7 @@ RunFiles = []
 ReleaseLength = 24   # platforms
 
 # # windage details
-Windage = [0.04, 0.05]
+Windage = [0.02, 0.03]
 WindagePersist = -1
 
 # name of the GNOME SAV file you want to use
