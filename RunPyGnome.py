@@ -239,7 +239,7 @@ for Season in setup.StartTimeFiles:
             #                                  )
 
             spill = surface_point_line_spill(num_elements=setup.NumLEs,
-                                             start_position=( start_position[0], start_position[1] ),
+                                             start_position=( start_position[0], start_position[1], 0.0 ),
                                              release_time=start_time,
                                              end_release_time=start_time+release_duration, 
                                              windage_range=(setup.Windage),
