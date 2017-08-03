@@ -145,7 +145,8 @@ Grid.num_lat = int(np.ceil(np.abs(Grid.max_lat - Grid.min_lat)/Grid.dlat) + 1)
 Grid.num_long = int(np.ceil(np.abs(Grid.max_long - Grid.min_long)/Grid.dlong) + 1)
 
 
-TrajectoriesPath = "Trajectories_n" + str(NumLEs) # relative to RootDir
+TrajectoriesPath = "Trajectories_4.5windage" # relative to RootDir
+# TrajectoriesPath = "Trajectories_n" + str(NumLEs) # relative to RootDir
 # TrajectoriesPath = "Trajectories_n5000" # relative to RootDir
 #TrajectoriesRootname = "FlStr_Traj"
 
