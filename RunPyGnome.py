@@ -6,7 +6,8 @@ from datetime import datetime, timedelta
 # import importlib
 
 import gnome
-from gnome.spill import point_line_release_spill
+# from gnome.spill import point_line_release_spill
+from gnome.scripting import surface_point_line_spill
 from gnome.outputters import Renderer, NetCDFOutput
 
 from datetime import datetime, timedelta
