@@ -104,7 +104,7 @@ RunFiles = []
 
 
 # # Length of release in hours  (0 for instantaneous)
-ReleaseLength = 14*24   # platforms
+ReleaseLength = 24   # platforms
 
 # # windage details
 Windage = [0.04, 0.05]
