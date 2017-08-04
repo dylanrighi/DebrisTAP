@@ -107,8 +107,8 @@ RunFiles = []
 ReleaseLength = 24   # platforms
 
 # # windage details
-Windage = [0.04, 0.05]
-# Windage = [0.02, 0.03]
+# Windage = [0.04, 0.05]
+Windage = [0.02, 0.03]
 WindagePersist = -1
 
 # name of the GNOME SAV file you want to use
@@ -145,8 +145,8 @@ Grid.dlong = 0.025       # 2.33km at 30N, 2.25km at 36N
 Grid.num_lat = int(np.ceil(np.abs(Grid.max_lat - Grid.min_lat)/Grid.dlat) + 1)
 Grid.num_long = int(np.ceil(np.abs(Grid.max_long - Grid.min_long)/Grid.dlong) + 1)
 
-
-TrajectoriesPath = "Trajectories_4.5windage" # relative to RootDir
+TrajectoriesPath = "Trajectories_2.5windage" # relative to RootDir
+# TrajectoriesPath = "Trajectories_4.5windage" # relative to RootDir
 # TrajectoriesPath = "Trajectories_n" + str(NumLEs) # relative to RootDir
 # TrajectoriesPath = "Trajectories_n5000" # relative to RootDir
 #TrajectoriesRootname = "FlStr_Traj"
