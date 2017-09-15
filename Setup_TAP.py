@@ -79,9 +79,9 @@ Seasons = [
           #["NoIce",  [6, 7, 8, 9, 10, 11 ]], 
           ["Winter", [12, 1, 2 ]],
           # ["Summer",  [6, 7, 8, 9, 10, 11 ]], 
-          # ["Spring",  [3, 4, 5 ]], 
+          ["Spring",  [3, 4, 5 ]], 
           ["Summer",  [6, 7, 8 ]], 
-          # ["Faller",  [9, 10, 11]],
+          ["Fall",  [9, 10, 11]],
           ]              
 
 # You don't need to do anything with this
@@ -110,6 +110,8 @@ ReleaseLength = 24   # platforms
 # Windage = [0.0, 0.01]
 Windage = [0.04, 0.05]
 WindagePersist = -1
+
+print 'Windage :: ', Windage
 
 # name of the GNOME SAV file you want to use
 # note: GNOME locks it (for a very brief time when loading) 
@@ -158,7 +160,7 @@ TrajectoriesPath = "Trajectories_45windage" # relative to RootDir
 CubesPath = "Cubes_n" + str(NumLEs)
 CubesRootNames = ["Debr" for i in StartTimeFiles] # built to match the start time files
 
-CubeStartSitesFilename = os.path.join(RootDir, "sites_debris.txt")
+CubeStartSitesFilename = os.path.join(RootDir, "sites_debris_all.txt")
 spos = open(os.path.join(RootDir,CubeStartSitesFilename)).readlines()
 
 # kludge for iterating runs
