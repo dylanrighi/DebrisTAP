@@ -107,8 +107,8 @@ RunFiles = []
 ReleaseLength = 24   # platforms
 
 # # windage details
-# Windage = [0.0, 0.01]
-Windage = [0.04, 0.05]
+Windage = [0.0, 0.01]
+# Windage = [0.04, 0.05]
 WindagePersist = -1
 
 print 'Windage :: ', Windage
@@ -147,8 +147,8 @@ Grid.dlong = 0.025       # 2.33km at 30N, 2.25km at 36N
 Grid.num_lat = int(np.ceil(np.abs(Grid.max_lat - Grid.min_lat)/Grid.dlat) + 1)
 Grid.num_long = int(np.ceil(np.abs(Grid.max_long - Grid.min_long)/Grid.dlong) + 1)
 
-# TrajectoriesPath = "Trajectories_01windage" # relative to RootDir
-TrajectoriesPath = "Trajectories_45windage" # relative to RootDir
+TrajectoriesPath = "Trajectories_01windage" # relative to RootDir
+# TrajectoriesPath = "Trajectories_45windage" # relative to RootDir
 
 # TrajectoriesPath = "Trajectories_4.5windage" # relative to RootDir
 # TrajectoriesPath = "Trajectories_n" + str(NumLEs) # relative to RootDir
@@ -156,8 +156,10 @@ TrajectoriesPath = "Trajectories_45windage" # relative to RootDir
 #TrajectoriesRootname = "FlStr_Traj"
 
 
-# CubesPath = "Cubes_01windage"
-CubesPath = "Cubes_n" + str(NumLEs)
+CubesPath = "Cubes_01windage"
+# CubesPath = "Cubes_45windage"
+
+# CubesPath = "Cubes_n" + str(NumLEs)
 CubesRootNames = ["Debr" for i in StartTimeFiles] # built to match the start time files
 
 CubeStartSitesFilename = os.path.join(RootDir, "sites_debris_all.txt")
