@@ -74,7 +74,7 @@ WindTopoFile = "wrf_topo_1.3.10.DAT"
 # Seasons = [["All_year", range(1,13) ],
 #               ]
 Seasons = [
-          # ["AllYear", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]],
+          ["AllYear", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]],
           #["Ice", [12, 1, 2, 3, 4, 5]],
           #["NoIce",  [6, 7, 8, 9, 10, 11 ]], 
           ["Winter", [12, 1, 2 ]],
